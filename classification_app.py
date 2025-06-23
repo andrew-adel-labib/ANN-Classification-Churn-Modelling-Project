@@ -1,11 +1,11 @@
+import pickle
 import streamlit as st
 import numpy as np
 import pandas as pd
-import pickle
 import tensorflow as tf
 from sklearn.preprocessing import StandardScaler, LabelEncoder, OneHotEncoder
 
-model = tf.keras.models.load_model("model.h5")
+model = tf.keras.models.load_model("classification_model.h5")
 
 with open('label_encoder_gender.pkl', 'rb') as file:
     label_encoder_gender = pickle.load(file)
